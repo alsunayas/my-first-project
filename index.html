@@ -173,13 +173,32 @@
     }
 
     /* ===== FEATURES ===== */
+    .features-section {
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .features-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #e8e8f0;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.5px;
+    }
+
+    .features-subtitle {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #6666a0;
+      margin-bottom: 2.5rem;
+    }
+
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1.5rem;
-      max-width: 1000px;
-      margin: 4rem auto;
-      padding: 0 2rem;
     }
 
     .card {
@@ -244,21 +263,25 @@
     </div>
   </section>
 
-  <section class="features">
-    <div class="card">
-      <div class="card-icon">⚡</div>
-      <h3>سريع وخفيف</h3>
-      <p>أداء عالٍ من أول تحميل دون أي تعقيدات أو مكتبات خارجية.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">🎨</div>
-      <h3>تصميم احترافي</h3>
-      <p>واجهة أنيقة بألوان متناسقة تعطي انطباعاً أول رائعاً لزوارك.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">🔒</div>
-      <h3>آمن وموثوق</h3>
-      <p>كود نظيف ومنظم يسهل صيانته وتطويره في أي وقت.</p>
+  <section class="features-section">
+    <h2 class="features-title">Features</h2>
+    <p class="features-subtitle">كل ما تحتاجه في مكان واحد</p>
+    <div class="features">
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>سريع وخفيف</h3>
+        <p>أداء عالٍ من أول تحميل دون أي تعقيدات أو مكتبات خارجية.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎨</div>
+        <h3>تصميم احترافي</h3>
+        <p>واجهة أنيقة بألوان متناسقة تعطي انطباعاً أول رائعاً لزوارك.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔒</div>
+        <h3>آمن وموثوق</h3>
+        <p>كود نظيف ومنظم يسهل صيانته وتطويره في أي وقت.</p>
+      </div>
     </div>
   </section>
 
