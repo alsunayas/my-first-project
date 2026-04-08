@@ -175,7 +175,7 @@
     /* ===== FEATURES ===== */
     .features-section {
       max-width: 1000px;
-      margin: 4rem auto;
+      margin: 5rem auto 4rem;
       padding: 0 2rem;
     }
 
@@ -183,52 +183,61 @@
       text-align: center;
       font-size: 2rem;
       font-weight: 700;
-      color: #e8e8f0;
-      margin-bottom: 0.6rem;
+      background: linear-gradient(135deg, #e8e8f0 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.8rem;
       letter-spacing: -0.5px;
     }
 
     .features-subtitle {
       text-align: center;
       font-size: 0.95rem;
-      color: #6666a0;
-      margin-bottom: 2.5rem;
+      color: #7777a0;
+      margin-bottom: 2.8rem;
+      line-height: 1.6;
     }
 
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
+      gap: 1.8rem;
     }
 
     .card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
       border-radius: 16px;
       padding: 2rem;
-      transition: border-color 0.2s, transform 0.2s;
+      transition: border-color 0.2s, transform 0.2s, background 0.2s;
     }
 
     .card:hover {
-      border-color: rgba(124, 111, 234, 0.3);
+      border-color: rgba(124, 111, 234, 0.35);
       transform: translateY(-4px);
+      background: rgba(124, 111, 234, 0.05);
     }
 
     .card-icon {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+      display: inline-block;
+      font-size: 1.6rem;
+      background: rgba(124, 111, 234, 0.12);
+      border-radius: 10px;
+      padding: 0.5rem 0.65rem;
+      margin-bottom: 1.2rem;
     }
 
     .card h3 {
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-weight: 600;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
       color: #e8e8f0;
     }
 
     .card p {
       font-size: 0.88rem;
-      color: #6666a0;
+      color: #7777a0;
       line-height: 1.6;
     }
 
