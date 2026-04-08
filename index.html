@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My First Project</title>
   <style>
+    :root {
+      --color-primary: #7c6fea;
+      --color-primary-light: #a78bfa;
+      --color-primary-lighter: #c4b5fd;
+      --color-text: #e8e8f0;
+      --color-text-muted: #7777a0;
+      --color-text-nav: #9999b3;
+      --color-bg: #0a0a0f;
+      --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    }
+
     *, *::before, *::after {
       margin: 0;
       padding: 0;
@@ -13,8 +24,8 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-      background: #0a0a0f;
-      color: #e8e8f0;
+      background: var(--color-bg);
+      color: var(--color-text);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -37,7 +48,7 @@
     .logo {
       font-size: 1.3rem;
       font-weight: 700;
-      background: linear-gradient(135deg, #7c6fea, #a78bfa);
+      background: var(--gradient-primary);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -51,14 +62,14 @@
     }
 
     .nav-links a {
-      color: #9999b3;
+      color: var(--color-text-nav);
       text-decoration: none;
       font-size: 0.9rem;
       transition: color 0.2s;
     }
 
     .nav-links a:hover {
-      color: #e8e8f0;
+      color: var(--color-text);
     }
 
     /* ===== HERO ===== */
@@ -92,7 +103,7 @@
       gap: 0.4rem;
       background: rgba(124, 111, 234, 0.12);
       border: 1px solid rgba(124, 111, 234, 0.3);
-      color: #a78bfa;
+      color: var(--color-primary-light);
       font-size: 0.78rem;
       font-weight: 600;
       padding: 0.35rem 0.9rem;
@@ -112,7 +123,7 @@
     }
 
     .hero h1 span {
-      background: linear-gradient(135deg, #7c6fea 0%, #a78bfa 50%, #c4b5fd 100%);
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 50%, var(--color-primary-lighter) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -120,7 +131,7 @@
 
     .hero p {
       font-size: 1.1rem;
-      color: #7777a0;
+      color: var(--color-text-muted);
       max-width: 520px;
       line-height: 1.7;
       margin-bottom: 2.5rem;
@@ -135,7 +146,7 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #7c6fea, #a78bfa);
+      background: var(--gradient-primary);
       color: #fff;
       border: none;
       padding: 0.85rem 2.2rem;
@@ -146,6 +157,8 @@
       transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
       box-shadow: 0 4px 24px rgba(124, 111, 234, 0.4);
       letter-spacing: -0.2px;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .btn-primary:hover {
@@ -156,7 +169,7 @@
 
     .btn-secondary {
       background: transparent;
-      color: #9999b3;
+      color: var(--color-text-nav);
       border: 1px solid rgba(255,255,255,0.1);
       padding: 0.85rem 2.2rem;
       border-radius: 12px;
@@ -164,11 +177,13 @@
       font-weight: 500;
       cursor: pointer;
       transition: border-color 0.2s, color 0.2s, transform 0.2s;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .btn-secondary:hover {
       border-color: rgba(255,255,255,0.25);
-      color: #e8e8f0;
+      color: var(--color-text);
       transform: translateY(-2px);
     }
 
@@ -183,7 +198,7 @@
       text-align: center;
       font-size: 2rem;
       font-weight: 700;
-      background: linear-gradient(135deg, #e8e8f0 0%, #a78bfa 100%);
+      background: linear-gradient(135deg, var(--color-text) 0%, var(--color-primary-light) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -194,7 +209,7 @@
     .features-subtitle {
       text-align: center;
       font-size: 0.95rem;
-      color: #7777a0;
+      color: var(--color-text-muted);
       margin-bottom: 2.8rem;
       line-height: 1.6;
     }
@@ -232,12 +247,12 @@
       font-size: 1.05rem;
       font-weight: 600;
       margin-bottom: 0.6rem;
-      color: #e8e8f0;
+      color: var(--color-text);
     }
 
     .card p {
       font-size: 0.88rem;
-      color: #7777a0;
+      color: var(--color-text-muted);
       line-height: 1.6;
     }
 
@@ -249,6 +264,29 @@
       font-size: 0.82rem;
       border-top: 1px solid rgba(255,255,255,0.04);
     }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 600px) {
+      nav {
+        padding: 1rem 1.5rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+      }
+
+      .nav-links a {
+        font-size: 0.82rem;
+      }
+
+      .hero {
+        padding: 3rem 1.5rem;
+      }
+
+      .features-section {
+        margin: 3rem auto 2rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -256,24 +294,24 @@
   <nav>
     <div class="logo">MyProject</div>
     <ul class="nav-links">
-      <li><a href="#">الرئيسية</a></li>
-      <li><a href="#">المميزات</a></li>
-      <li><a href="#">تواصل معنا</a></li>
+      <li><a href="#hero">الرئيسية</a></li>
+      <li><a href="#features">المميزات</a></li>
+      <li><a href="mailto:">تواصل معنا</a></li>
     </ul>
   </nav>
 
-  <section class="hero">
+  <section class="hero" id="hero">
     <div class="badge">مشروعي الأول</div>
     <h1>ابنِ <span>مشاريعك</span><br>بثقة واحتراف</h1>
     <p>منصة حديثة تساعدك على إطلاق أفكارك وتحويلها إلى واقع بأدوات بسيطة وتجربة سلسة.</p>
     <div class="cta-group">
-      <button class="btn-primary">ابدأ الآن</button>
-      <button class="btn-secondary">تعرف على المزيد</button>
+      <a href="#features" class="btn-primary">ابدأ الآن</a>
+      <a href="#features" class="btn-secondary">تعرف على المزيد</a>
     </div>
   </section>
 
-  <section class="features-section">
-    <h2 class="features-title">Features</h2>
+  <section class="features-section" id="features">
+    <h2 class="features-title">المميزات</h2>
     <p class="features-subtitle">كل ما تحتاجه في مكان واحد</p>
     <div class="features">
       <div class="card">
